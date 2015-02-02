@@ -55,7 +55,7 @@ unsigned long *get_sys_call_table(void)
   {
     temp_sys_call_table = (unsigned long *)addr;
     if (temp_sys_call_table[__NR_close] == (unsigned long)sys_close)
-    return temp_sys_call_table;
+      return temp_sys_call_table;
   }
   return NULL;
 }
