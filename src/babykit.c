@@ -85,12 +85,12 @@ static ssize_t babykit_write(struct file *filp, const char __user *buff, size_t 
 
 static inline void protect_memory(void) 
 {
-	write_cr0(cr0);
+  write_cr0(cr0);
 }
 
 static inline void unprotect_memory(void)
 {
-	write_cr0(cr0 & ~0x00010000);
+  write_cr0(cr0 & ~0x00010000);
 }
 
 
